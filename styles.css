@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('mainbg.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header {
+    background: linear-gradient(135deg, red, darkred, red);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+.header .logo {
+    margin-left: 20px;
+}
+
+.header .logo a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header nav {
+    margin-right: 20px;
+}
+
+.header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.title-content {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    animation: fadeIn 3s forwards;
+}
+
+.content {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-text-block {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.image-text-block:nth-of-type(odd) {
+    flex-direction: row;
+}
+
+.image-text-block:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.image-text-block img {
+    width: 200px;
+    height: 200px;
+    margin: 0 20px;
+}
+
+.image-text-block p {
+    width: 60%;
+    text-align: left;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.footer {
+    background: linear-gradient(135deg, darkred, red, darkred);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
